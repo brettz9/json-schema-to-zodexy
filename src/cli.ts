@@ -10,7 +10,9 @@ const params = {
     shorthand: "i",
     value: "string",
     required:
+      /* c8 ignore next -- Not testing */
       process.stdin.isTTY &&
+      /* c8 ignore next -- Not testing */
       "input is required when no JSON or file path is piped",
     description: "JSON or a source file path. Required if no data is piped.",
   },
