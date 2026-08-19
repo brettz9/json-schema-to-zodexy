@@ -5,9 +5,8 @@
     "module": "commonjs",
     "outDir": "dist/cjs",
     "rootDir": "src",
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true
+    "declaration": true,
+    "strict": true
   },
   "include": ["src"]
 }

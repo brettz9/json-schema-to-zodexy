@@ -2,12 +2,12 @@
   "compilerOptions": {
     "types": ["node"],
     "target": "es2020",
-    "module": "es2020",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "outDir": "dist/esm",
     "rootDir": "src",
-    "strict": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true
+    "declaration": true,
+    "strict": true
   },
   "include": ["src"]
 }

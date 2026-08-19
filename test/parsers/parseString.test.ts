@@ -1,6 +1,6 @@
 import { dezerialize } from "zodexy";
-import { parseString } from "../../src/parsers/parseString";
-import { suite } from "../suite";
+import { parseString } from "../../src/parsers/parseString.js";
+import { suite } from "../suite.js";
 
 suite("parseString", (test) => {
   test("email", (assert) => {

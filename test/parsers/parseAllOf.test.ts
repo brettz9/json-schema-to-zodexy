@@ -1,5 +1,5 @@
-import { parseAllOf } from "../../src/parsers/parseAllOf";
-import { suite } from "../suite";
+import { parseAllOf } from "../../src/parsers/parseAllOf.js";
+import { suite } from "../suite.js";
 
 suite("parseAllOf", (test) => {
   test("should create never if empty", (assert) => {

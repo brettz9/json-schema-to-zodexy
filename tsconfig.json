@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
     "types": ["node"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "strict": true,
-    "noEmit": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true
+    "noEmit": true
   },
   "include": ["src", "test"]
 }

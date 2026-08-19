@@ -3,8 +3,8 @@ import {
   JSONSchema6Definition,
   JSONSchema7Definition,
 } from "json-schema";
-import jsonSchemaToZodexy from "../src";
-import { suite } from "./suite";
+import {jsonSchemaToZodexy} from "../src/index.js";
+import { suite } from "./suite.js";
 
 suite("jsonSchemaToZodexy", (test) => {
   test("should accept json schema 7 and 4", (assert) => {

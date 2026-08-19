@@ -1,1 +1,3 @@
-require("fs").writeFileSync("./dist/cjs/package.json", '{"type":"commonjs"}', "utf-8")
+import { writeFileSync } from "node:fs"
+
+writeFileSync("./dist/cjs/package.json", '{"type":"commonjs"}', "utf-8")

@@ -1,1 +1,3 @@
-require("fs").writeFileSync("./dist/esm/package.json", '{"type":"module"}', "utf-8")
+import { writeFileSync } from "node:fs"
+
+writeFileSync("./dist/esm/package.json", '{"type":"module"}', "utf-8")

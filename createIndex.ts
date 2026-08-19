@@ -1,4 +1,4 @@
-import { readdirSync, writeFileSync, statSync } from "fs";
+import { readdirSync, writeFileSync, statSync } from "node:fs";
 
 const ignore = ["src/index.ts", "src/cli.ts", "src/utils/cliTools.ts"];
 
@@ -26,7 +26,6 @@ const lines = checkSrcDir("src");
 
 lines.push(
   'import { jsonSchemaToZodexy } from "./jsonSchemaToZodexy.js"',
-  "export default jsonSchemaToZodexy",
 );
 
 writeFileSync("./src/index.ts", lines.join("\n") + '\n');

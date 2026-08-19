@@ -1,8 +1,8 @@
 import { dezerialize } from "zodexy";
 import { JSONSchema7 } from "json-schema";
 import { ZodError } from "zod";
-import { parseObject } from "../../src/parsers/parseObject";
-import { suite } from "../suite";
+import { parseObject } from "../../src/parsers/parseObject.js";
+import { suite } from "../suite.js";
 
 suite("parseObject", (test) => {
   test("should handle with missing properties", (assert) => {

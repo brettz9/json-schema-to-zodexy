@@ -21,4 +21,3 @@ export * from "./utils/jsdocs.js"
 export * from "./utils/omit.js"
 export * from "./utils/withMessage.js"
 import { jsonSchemaToZodexy } from "./jsonSchemaToZodexy.js"
-export default jsonSchemaToZodexy

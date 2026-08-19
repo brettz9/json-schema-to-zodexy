@@ -76,7 +76,7 @@ const justTheSchema = jsonSchemaToZodexy(myObject);
 import { z } from "zod";
 import { resolveRefs } from "json-refs";
 import { format } from "prettier";
-import jsonSchemaToZodexy from "json-schema-to-zodexy";
+import { jsonSchemaToZodexy } from "json-schema-to-zodexy";
 
 async function example(jsonSchema: Record<string, unknown>): Promise<string> {
   const { resolved } = await resolveRefs(jsonSchema);

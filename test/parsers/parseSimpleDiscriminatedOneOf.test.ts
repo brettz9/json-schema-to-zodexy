@@ -1,7 +1,7 @@
 import { parseSimpleDiscriminatedOneOf } from "../../src/parsers/parseSimpleDiscriminatedOneOf.js";
 import { its } from "../../src/parsers/parseSchema.js";
 import { JsonSchemaObject } from "../../src/Types.js";
-import { suite } from "../suite";
+import { suite } from "../suite.js";
 
 suite("parseSimpleDiscriminatedOneOf", (test) => {
   test("should create a discriminated union from two or more object schemas", (assert) => {

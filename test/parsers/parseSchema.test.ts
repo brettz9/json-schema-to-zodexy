@@ -1,5 +1,5 @@
 import { parseSchema } from "../../src/parsers/parseSchema.js";
-import { suite } from "../suite";
+import { suite } from "../suite.js";
 
 suite("parseSchema", (test) => {
   test("should be usable without providing refs", (assert) => {
