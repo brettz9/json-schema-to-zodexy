@@ -1,17 +1,15 @@
-# json-schema-to-zodex
+# json-schema-to-zodexy
 
-[![NPM Version](https://img.shields.io/npm/v/json-schema-to-zodex.svg)](https://npmjs.org/package/json-schema-to-zodex)
-[![NPM Downloads](https://img.shields.io/npm/dw/json-schema-to-zodex.svg)](https://npmjs.org/package/json-schema-to-zodex)
-
-**This package is now deprecated in favor of [json-schema-to-zodexy](https://github.com/brettz9/json-schema-to-zodexy)**
+[![NPM Version](https://img.shields.io/npm/v/json-schema-to-zodexy.svg)](https://npmjs.org/package/json-schema-to-zodexy)
+[![NPM Downloads](https://img.shields.io/npm/dw/json-schema-to-zodexy.svg)](https://npmjs.org/package/json-schema-to-zodexy)
 
 ## Summary
 
-A runtime package and CLI tool to convert JSON schema (draft 4+) objects or files into Zodex schemas.
+A runtime package and CLI tool to convert JSON schema (draft 4+) objects or files into Zodexy schemas.
 
-This is a fork of [json-schema-to-zod](https://github.com/StefanTerdell/json-schema-to-zod) which seeks to allow dynamic evaluation without the need for `eval`.
+This is a fork of [json-schema-to-zod](https://github.com/StefanTerdell/json-schema-to-zod) which seeks to allow dynamic evaluation without the need for `eval`. It is more recently a fork of [json-schema-to-zodex](https://github.com/brettz9/json-schema-to-zodex), with the rename being for the sake of reflecting its support for the maintained fork [zodexy](https://github.com/brettz9/zodexy) over [zodex](https://github.com/commonbaseapp/zodex).
 
-**Note that with the ability to convert to Zodex JSON, some of the export options are no longer relevant and have been removed.** The original project adds procedural code for cases which Zodex does not handle out of the box (e.g., for multiple `oneOf` or conditionals), so if you
+**Note that with the ability to convert to Zodexy JSON, some of the export options are no longer relevant and have been removed.** The original project adds procedural code for cases which Zodexy does not handle out of the box (e.g., for multiple `oneOf` or conditionals), so if you
 need such features, you may need to rely on the original project.
 
 _Looking for the opposite? Check out [zod-to-json-schema](https://npmjs.org/package/zod-to-json-schema)_
@@ -23,21 +21,21 @@ _Looking for the opposite? Check out [zod-to-json-schema](https://npmjs.org/pack
 #### Simplest example
 
 ```console
-npm i -g json-schema-to-zodex
+npm i -g json-schema-to-zodexy
 ```
 
 ```console
-json-schema-to-zodex -i mySchema.json -o mySchema.ts
+json-schema-to-zodexy -i mySchema.json -o mySchema.ts
 ```
 
 #### Example with `$refs` resolved and output formatted
 
 ```console
-npm i -g json-schema-to-zodex json-refs prettier
+npm i -g json-schema-to-zodexy json-refs prettier
 ```
 
 ```console
-json-refs resolve mySchema.json | json-schema-to-zodex | prettier --parser typescript > mySchema.ts
+json-refs resolve mySchema.json | json-schema-to-zodexy | prettier --parser typescript > mySchema.ts
 ```
 
 #### Options
@@ -56,7 +54,7 @@ json-refs resolve mySchema.json | json-schema-to-zodex | prettier --parser types
 #### Simple example
 
 ```typescript
-import { jsonSchemaToZodex } from "json-schema-to-zodex";
+import { jsonSchemaToZodexy } from "json-schema-to-zodexy";
 
 const myObject = {
   type: "object",
@@ -69,7 +67,7 @@ const myObject = {
 
 // `type` can be either a string or - outside of the CLI - a boolean. If its `true`, the name of the type will be the name of the schema with a capitalized first letter.
 
-const justTheSchema = jsonSchemaToZodex(myObject);
+const justTheSchema = jsonSchemaToZodexy(myObject);
 ```
 
 #### Example with `$refs` resolved and output formatted
@@ -78,11 +76,11 @@ const justTheSchema = jsonSchemaToZodex(myObject);
 import { z } from "zod";
 import { resolveRefs } from "json-refs";
 import { format } from "prettier";
-import jsonSchemaToZodex from "json-schema-to-zodex";
+import jsonSchemaToZodexy from "json-schema-to-zodexy";
 
 async function example(jsonSchema: Record<string, unknown>): Promise<string> {
   const { resolved } = await resolveRefs(jsonSchema);
-  const code = jsonSchemaToZodex(resolved);
+  const code = jsonSchemaToZodexy(resolved);
   const formatted = await format(code, { parser: "typescript" });
 
   return formatted;

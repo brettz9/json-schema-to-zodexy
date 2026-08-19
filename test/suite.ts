@@ -1,6 +1,6 @@
 import util from "util";
 import diff from "fast-diff";
-import { zerialize, dezerialize } from "zodex";
+import { zerialize, dezerialize } from "zodexy";
 import {
   CompareValuesWithDetailedDifferences
 } from 'object-deep-compare';

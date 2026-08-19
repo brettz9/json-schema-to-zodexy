@@ -1,6 +1,6 @@
 {
-  "name": "json-schema-to-zodex",
-  "version": "0.2.0",
+  "name": "json-schema-to-zodexy",
+  "version": "0.3.0",
   "description": "Converts JSON schema objects or files into Zod schemas",
   "types": "./dist/types/index.d.ts",
   "bin": "./dist/cjs/cli.js",
@@ -69,7 +69,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/brettz9/json-schema-to-zodex"
+    "url": "https://github.com/brettz9/json-schema-to-zodexy"
   },
   "devDependencies": {
     "@types/json-schema": "^7.0.15",
@@ -81,6 +81,6 @@
     "tsx": "^4.23.12",
     "typescript": "^7.0.2",
     "zod": "^4.4.3",
-    "zodex": "^4.0.1"
+    "zodexy": "^0.26.1"
   }
 }

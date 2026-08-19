@@ -1,4 +1,4 @@
-import { dezerialize } from "zodex";
+import { dezerialize } from "zodexy";
 import { JSONSchema7 } from "json-schema";
 import { ZodError } from "zod";
 import { parseObject } from "../../src/parsers/parseObject";

@@ -1,17 +1,5 @@
-# CHANGES to json-schema-to-zodex
+# CHANGES to json-schema-to-zodexy
 
-## 0.2.0
+## 0.3.0
 
-- fix: remove unused code
-
-## 0.1.2
-
-- fix: Zodex 4 expectations for enums, ints, strict objects
-
-## 0.1.1
-
-- fix: use `values` with literal output as per Zodex 4
-
-## 0.1.0
-
-- Initial commit of fork
+- Initial version of json-schema-to-zodex fork

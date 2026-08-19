@@ -1,11 +1,11 @@
-import { dezerialize } from "zodex";
-import { jsonSchemaToZodex } from "../src/jsonSchemaToZodex.js";
+import { dezerialize } from "zodexy";
+import { jsonSchemaToZodexy } from "../src/jsonSchemaToZodexy.js";
 import { suite } from "./suite.js";
 
 suite("dezerialize", (test) => {
   test("is usable I guess", (assert) => {
     const zodSchema = dezerialize(
-      JSON.parse(jsonSchemaToZodex({ type: "string" })),
+      JSON.parse(jsonSchemaToZodexy({ type: "string" })),
     );
 
     assert(zodSchema.safeParse("Testing"), {

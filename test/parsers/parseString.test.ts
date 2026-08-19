@@ -1,4 +1,4 @@
-import { dezerialize } from "zodex";
+import { dezerialize } from "zodexy";
 import { parseString } from "../../src/parsers/parseString";
 import { suite } from "../suite";
 

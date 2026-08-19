@@ -2,7 +2,7 @@ import { Options, JsonSchema } from "./Types.js";
 import { parseSchema } from "./parsers/parseSchema.js";
 import { expandJsdocs } from "./utils/jsdocs.js";
 
-export const jsonSchemaToZodex = (
+export const jsonSchemaToZodexy = (
   schema: JsonSchema,
   { module, name, ...rest }: Options = {},
 ): string => {

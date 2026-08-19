@@ -1,4 +1,4 @@
-import "./jsonSchemaToZodex.test.js";
+import "./jsonSchemaToZodexy.test.js";
 import "./cli.js";
 import "./dezerialize.test.js";
 import "./parsers/parseAnyOf.test.js";
