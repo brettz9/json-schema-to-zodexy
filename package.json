@@ -1,6 +1,6 @@
 {
   "name": "json-schema-to-zodexy",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Converts JSON schema objects or files into Zodexy schemas",
   "types": "./dist/types/index.d.ts",
   "bin": "./dist/cjs/cli.js",
