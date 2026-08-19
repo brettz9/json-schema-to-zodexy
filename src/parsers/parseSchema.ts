@@ -72,8 +72,28 @@ export const parseSchema = (
 };
 
 const addMeta = (schema: JsonSchemaObject, parsed: string): string => {
-  if (schema.description) {
-    parsed = parsed.slice(0, -1) + `, "description": ${JSON.stringify(schema.description)}}`;
+  if (Object.hasOwn(schema, 'title') || Object.hasOwn(schema, 'description') ||
+   Object.hasOwn(schema, '$id') || Object.hasOwn(schema, 'deprecated')) {
+
+    parsed = parsed.slice(0, -1) + `, "meta": {`;
+
+    if (Object.hasOwn(schema, 'title')) {
+      parsed += `"title": ${JSON.stringify(schema.title)},`;
+    }
+
+    if (Object.hasOwn(schema, 'description')) {
+      parsed += `"description": ${JSON.stringify(schema.description)},`;
+    }
+
+    if (Object.hasOwn(schema, '$id')) {
+      parsed += `"id": ${JSON.stringify(schema.$id)},`;
+    }
+
+    if (Object.hasOwn(schema, 'deprecated')) {
+      parsed += `"deprecated": ${JSON.stringify(schema.deprecated)},`;
+    }
+
+    parsed = parsed.slice(0, -1) + '}}';
   }
 
   return parsed;

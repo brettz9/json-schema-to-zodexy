@@ -25,7 +25,7 @@ suite("jsonSchemaToZodexy", (test) => {
         { module: "esm", withJsdocs: true },
       ),
       `/**The description*/
-export default {"type": "string", "description": "The description"}
+export default {"type": "string", "meta": {"description": "The description"}}
 `,
       true
     );
@@ -44,7 +44,7 @@ export default {"type": "string", "description": "The description"}
 * The
 * description
 */
-export default {"type": "string", "description": "The\\ndescription"}
+export default {"type": "string", "meta": {"description": "The\\ndescription"}}
 `,
       true
     );
@@ -124,6 +124,21 @@ export default {"type": "string", "description": "The\\ndescription"}
     );
   });
 
+  test("should include titles", (assert) => {
+    assert(
+      jsonSchemaToZodexy(
+        {
+          type: "string",
+          title: "foo",
+        },
+        { module: "esm" },
+      ),
+      `export default {"type": "string", "meta": {"title": "foo"}}
+`,
+      true
+    );
+  });
+
   test("should include descriptions", (assert) => {
     assert(
       jsonSchemaToZodexy(
@@ -133,7 +148,37 @@ export default {"type": "string", "description": "The\\ndescription"}
         },
         { module: "esm" },
       ),
-      `export default {"type": "string", "description": "foo"}
+      `export default {"type": "string", "meta": {"description": "foo"}}
+`,
+      true
+    );
+  });
+
+  test("should include id", (assert) => {
+    assert(
+      jsonSchemaToZodexy(
+        {
+          type: "string",
+          $id: "foo",
+        },
+        { module: "esm" },
+      ),
+      `export default {"type": "string", "meta": {"id": "foo"}}
+`,
+      true
+    );
+  });
+
+  test("should include deprecated", (assert) => {
+    assert(
+      jsonSchemaToZodexy(
+        {
+          type: "string",
+          deprecated: true,
+        },
+        { module: "esm" },
+      ),
+      `export default {"type": "string", "meta": {"deprecated": true}}
 `,
       true
     );
