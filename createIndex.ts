@@ -29,4 +29,4 @@ lines.push(
   "export default jsonSchemaToZodexy",
 );
 
-writeFileSync("./src/index.ts", lines.join("\n"));
+writeFileSync("./src/index.ts", lines.join("\n") + '\n');
