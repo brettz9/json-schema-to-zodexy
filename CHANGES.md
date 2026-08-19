@@ -1,5 +1,9 @@
 # CHANGES to json-schema-to-zodexy
 
+## 0.6.0
+
+- feat: update zodexy (adds `$zodexySchema` property)
+
 ## 0.5.0
 
 - feat: support $id, title, deprecated conversion

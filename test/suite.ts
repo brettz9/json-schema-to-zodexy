@@ -96,7 +96,9 @@ function assert(
 ): Error | ErrorMap | undefined {
   if (b && typeof b === 'string' && !alreadyRan) {
     const dez = dezerialize(JSON.parse(b as any));
-    const result = zerialize(dez);
+    const result = zerialize(dez, {
+      schema: null
+    });
     const expected = JSON.parse(b);
     const detailedDiffs = CompareValuesWithDetailedDifferences(result, expected).filter((
       {oldValue, newValue}

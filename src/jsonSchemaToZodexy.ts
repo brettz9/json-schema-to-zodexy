@@ -14,6 +14,8 @@ export const jsonSchemaToZodexy = (
     ...rest,
   });
 
+  result = `{"$zodexySchema": "https://github.com/brettz9/zodexy/releases/tag/v0.27.0", ` + result.slice(1)
+
   const jsdocs = rest.withJsdocs && typeof schema !== "boolean" && schema.description
     ? expandJsdocs(schema.description)
     : "";

@@ -1,5 +1,5 @@
 import { dezerialize } from "zodexy";
-import { jsonSchemaToZodexy } from "../src/jsonSchemaToZodexy.js";
+import { jsonSchemaToZodexy } from "./jsonSchemaToZodexy.js";
 import { suite } from "./suite.js";
 
 suite("dezerialize", (test) => {

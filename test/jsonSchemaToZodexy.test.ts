@@ -3,7 +3,7 @@ import {
   JSONSchema6Definition,
   JSONSchema7Definition,
 } from "json-schema";
-import {jsonSchemaToZodexy} from "../src/index.js";
+import {jsonSchemaToZodexy} from "./jsonSchemaToZodexy.js";
 import { suite } from "./suite.js";
 
 suite("jsonSchemaToZodexy", (test) => {

@@ -39,8 +39,8 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
       zodexy:
-        specifier: ^0.26.1
-        version: 0.26.1(zod@4.4.3)
+        specifier: ^0.27.0
+        version: 0.27.0(zod@4.4.3)
 
 packages:
 
@@ -769,8 +769,8 @@ packages:
   zod@4.4.3:
     resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
-  zodexy@0.26.1:
-    resolution: {integrity: sha512-LiXXHdkL9sAZPZ7ePlaPF0+caSiEZPBZOBTyBAMCzuYUckQkiEOYI1aPIR0j99A+6qRU/IVy8xD3OVnlcBM9DA==}
+  zodexy@0.27.0:
+    resolution: {integrity: sha512-w1p4GXSvT3l4YKnK2AOP2VZycpqteIKK5Y0AFFrtnw4mYlo2OXf3+dkgcV7mug5Y3dNBDoF40zG/OaN+hYtulw==}
     peerDependencies:
       zod: ^4.0.x
 
@@ -1382,7 +1382,7 @@ snapshots:
 
   zod@4.4.3: {}
 
-  zodexy@0.26.1(zod@4.4.3):
+  zodexy@0.27.0(zod@4.4.3):
     dependencies:
       type-fest: 4.41.0
       zod: 4.4.3

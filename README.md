@@ -57,6 +57,7 @@ json-refs resolve mySchema.json | json-schema-to-zodexy | prettier --parser type
 import { jsonSchemaToZodexy } from "json-schema-to-zodexy";
 
 const myObject = {
+  $zodexySchema: "https://github.com/brettz9/zodexy/releases/tag/v0.27.0",
   type: "object",
   properties: {
     hello: {
