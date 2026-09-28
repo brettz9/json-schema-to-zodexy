@@ -41,6 +41,42 @@ suite("parseSchema", (test) => {
     );
   });
 
+  test("should return 'any' for a seen ref that has reached the depth limit", (assert) => {
+    const seen = new Map();
+    const schema = {
+      type: "object",
+      properties: {
+        prop: {
+          type: "string"
+        }
+      }
+    };
+    seen.set(schema, { r: undefined, n: 1 });
+
+    assert(
+      parseSchema(schema, { seen, path: [], depth: 1 }),
+      `{"type": "any"}`,
+    );
+  });
+
+  test("should keep parsing a seen ref that has not reached the depth limit", (assert) => {
+    const seen = new Map();
+    const schema = {
+      type: "object",
+      properties: {
+        prop: {
+          type: "string"
+        }
+      }
+    };
+    seen.set(schema, { r: undefined, n: 0 });
+
+    assert(
+      parseSchema(schema, { seen, path: [], depth: 2 }),
+      `{"type": "object", "properties": {"prop": {"type": "string", "isOptional": true}}}`,
+    );
+  });
+
   test("should be possible to describe a readonly schema", (assert) => {
     assert(
       parseSchema({ type: "string", readOnly: true }),

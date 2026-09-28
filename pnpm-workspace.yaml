@@ -1,4 +1,4 @@
 allowBuilds:
   esbuild: true
 minimumReleaseAgeExclude:
-  - zodexy@0.26.1 || 0.27.0
+  - zodexy@0.26.1 || 0.27.0 || 0.32.1
